@@ -116,4 +116,4 @@ retry.addEventListener("click", () => {
 });
 
 game();
-// countdown();
+countdown();
