@@ -32,5 +32,12 @@ boardElem?.addEventListener("click", (e)=>{
   const target = e.target as HTMLElement;
   if(e.target === null) throw new Error("null ")
   if(target.id === "game-board") return;
-  target.style.backgroundColor = "green"
+  target.classList.add("active")
+})
+
+boardElem?.addEventListener("dblclick", (e)=>{
+  const target = e.target as HTMLElement;
+  if(e.target === null) throw new Error("null ")
+  if(target.id === "game-board") return;
+  target.classList.add("matched")
 })

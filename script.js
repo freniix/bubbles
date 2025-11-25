@@ -26,6 +26,14 @@ boardElem?.addEventListener("click", (e) => {
         throw new Error("null ");
     if (target.id === "game-board")
         return;
-    target.style.backgroundColor = "green";
+    target.classList.add("active");
+});
+boardElem?.addEventListener("dblclick", (e) => {
+    const target = e.target;
+    if (e.target === null)
+        throw new Error("null ");
+    if (target.id === "game-board")
+        return;
+    target.classList.add("matched");
 });
 //# sourceMappingURL=script.js.map
