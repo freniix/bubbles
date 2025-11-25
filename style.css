@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --radius-sm: 4px;
+  --radius-md: 16px;
+  --radius-base: 12px;
+  --radius-xl: 16px;
+
+  --clr-bg: rgb(25, 4, 27);
+  --clr-board: rgb(60, 25, 63);
+  --clr-info: rgb(127, 27, 136);
+  --clr-bubble: yellow;
+
+  --bubble-size: 40px;
+  --clr-text: hsl(0 0 90);
+
+  --space-md: .75rem;
+  --space-base: 1rem;
+  --gap: 10px;
+  --board-padding: 10px;
+}
+#wrapper {
+  width: 100%;
+  height: 100svh;
+  background-color: var(--clr-bg);
+  display: grid;
+  place-items: center;
+}
+#game-container {
+  width: 90%;
+  height: 90%;
+  min-height: 600px;
+  background-color: var(--clr-board);
+  border-radius: var(--radius-sm);
+  color:var(--clr-text);
+  font-family: "Montserrat";
+}
+
+#info{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+#info h3{
+  display: inline-block;
+}
+
+.info-value{
+  padding: var(--space-md) var(--space-base);
+  display: inline-block;
+  border-radius: var(--radius-sm );
+  background-color: var(--clr-info);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+#game-board {
+  height: 90%;
+  width: 100%;
+  display: grid;
+  background-color: rgb(214, 214, 214);
+  grid-template-columns: repeat(auto-fit, minmax(var(--bubble-size), 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(var(--bubble-size), 1fr));
+  gap: var(--gap);
+  padding: var(--board-padding);
+}
+.bubbles {
+  background-color: crimson;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .1s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.bubbles:hover{
+  background-color: green;
+}
+
+
